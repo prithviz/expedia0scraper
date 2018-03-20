@@ -1,0 +1,54 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} flight results {% endblock %}
+{% block content %}
+<h1 class="h1"><center>Scrapper</center></h1>
+    <div class="container">
+        <h3 class="h3">
+            Source : {{ param1 }}<br>
+            Destination : {{ param2 }}<br>
+            Date : {{ param3 }} [m-d-yy]<br>
+            Adults : {{ param4 }}<br>
+            Children : {{ param5 }}
+        </h3>
+            <p><b>Search Results....</b></p>
+    <ol>
+    {% for result in result_list %}
+        {% set r = result %}
+        <br>
+        <br>
+        <li>
+        <b>
+            <ul>
+            {% for k,v in r.items() %}
+                {% if k == "timings" %}
+                    {% for i in v %}
+                        {% set Arrival_date_Long = i['arrival_date_longStr'] %}
+                        {% set Arrival_date = i['arrival_date'] %}
+                        {% set Arrival_time = i['arrival_time'] %}
+                        {% set Arrival_airport = i['arrival_airport'] %}
+                        {% set Departure_date_Long = i['departure_date_longStr'] %}
+                        {% set Departure_date = i['departure_date'] %}
+                        {% set Departure_time = i['departure_time'] %}
+                        {% set Departure_airport = i['departure_airport'] %}
+                        Connecting-Flight Result..{{ loop.index }}
+                        <li>Arrival Date = {{ Arrival_date }}</li>
+                        <li>Arrival Date Full = {{ Arrival_date_Long }}</li>
+                        <li>Arrival time = {{ Arrival_time }}</li>
+                        <li>Arrival Airport = {{ Arrival_airport }}</li>
+                        <li>Departure Date = {{ Departure_date }}</li>
+                        <li>Departure Date Full = {{ Departure_date_Long }}</li>
+                        <li>Departure time = {{ Departure_time }}</li>
+                        <li>Departure Airport = {{ Departure_airport }}</li>
+                        <br>
+                    {% endfor %}
+                {% else %}
+                    <li>{{ k }} = {{ v }}</li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+    </b>
+    {% endfor %}
+        </li>
+    </ol>
+    </div>
+{% endblock %}

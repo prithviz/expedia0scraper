@@ -1,0 +1,50 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} flight results {% endblock %}
+{% block content %}
+<h1 class="h1"><center>Scrapper</center></h1>
+    <div class="container">
+        <h3 class="h3">
+            Source : {{ param1 }}<br>
+            Destination : {{ param2 }}<br>
+            Date : {{ param3 }} [m-d-yy]
+            Adults : {{ param4 }}
+            Children : {{ param5 }}
+        </h3>
+            <p><b>Search Results....</b></p>
+
+            {% for result in result_list %}
+            <article>
+                <br>
+                    {{ loop.index }}
+                {% for k,v in result.items() %}
+                    {% if k != "timings"  %}
+                        <b><br>{{ k }} = {{ v }}</b>
+                    {% elif k == 'timings' %}
+                        {% for i in v %}
+                            {% set Arrival_date_Long = i['arrival_date_longStr'] %}
+                            {% set Arrival_date = i['arrival_date'] %}
+                            {% set Arrival_time = i['arrival_time'] %}
+                            {% set Arrival_airport = i['arrival_airport'] %}
+                            {% set Departure_date_Long = i['departure_date_longStr'] %}
+                            {% set Departure_date = i['departure_date'] %}
+                            {% set Departure_time = i['departure_time'] %}
+                            {% set Departure_airport = i['departure_airport'] %}
+                            <b>
+                                <br>
+                                <br>
+                                    Connecting-Flight Result..{{ loop.index }}
+                                    <br>Arrival Date = {{ Arrival_date }}
+                                    <br>Arrival Date Full = {{ Arrival_date_Long }}
+                                    <br>Arrival time = {{ Arrival_time }}
+                                    <br>Arrival Airport = {{ Arrival_airport }}
+                                    <br>Departure Date = {{ Departure_date }}
+                                    <br>Departure Date Full = {{ Departure_date_Long }}
+                                    <br>Departure time = {{ Departure_time }}
+                                    <br>Departure Airport = {{ Departure_airport }}</b>
+                    {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            </article>
+    </div>
+{% endblock %}

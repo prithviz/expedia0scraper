@@ -1,0 +1,72 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="href" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ourVersions">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="23">
+            <item index="0" class="java.lang.String" itemvalue="com" />
+            <item index="1" class="java.lang.String" itemvalue="backports.functools_lru_cache" />
+            <item index="2" class="java.lang.String" itemvalue="protobuf" />
+            <item index="3" class="java.lang.String" itemvalue="wincertstore" />
+            <item index="4" class="java.lang.String" itemvalue="PyStemmer" />
+            <item index="5" class="java.lang.String" itemvalue="ed25519ll" />
+            <item index="6" class="java.lang.String" itemvalue="org" />
+            <item index="7" class="java.lang.String" itemvalue="pytest" />
+            <item index="8" class="java.lang.String" itemvalue="nt" />
+            <item index="9" class="java.lang.String" itemvalue="numpy" />
+            <item index="10" class="java.lang.String" itemvalue="ndg_httpsclient" />
+            <item index="11" class="java.lang.String" itemvalue="pyasn1" />
+            <item index="12" class="java.lang.String" itemvalue="redis" />
+            <item index="13" class="java.lang.String" itemvalue="pyxdg" />
+            <item index="14" class="java.lang.String" itemvalue="java" />
+            <item index="15" class="java.lang.String" itemvalue="pyOpenSSL" />
+            <item index="16" class="java.lang.String" itemvalue="certifi" />
+            <item index="17" class="java.lang.String" itemvalue="lxml" />
+            <item index="18" class="java.lang.String" itemvalue="ipaddr" />
+            <item index="19" class="java.lang.String" itemvalue="Cython" />
+            <item index="20" class="java.lang.String" itemvalue="keyring" />
+            <item index="21" class="java.lang.String" itemvalue="jsonschema" />
+            <item index="22" class="java.lang.String" itemvalue="requests" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E711" />
+          <option value="E402" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N801" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

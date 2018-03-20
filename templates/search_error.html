@@ -1,0 +1,16 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} No results Found {% endblock %}
+{% block content %}
+<h1 class="h1"><center>Scrapper</center></h1>
+    <div class="container">
+        <h3 class="h3">
+            Source : {{ param1 }}<br>
+            Destination : {{ param2 }}<br>
+            Date : {{ param3 }} [m-d-yy]
+            Adults : {{ param4 }}
+            Children : {{ param5 }}
+        </h3>
+            <p><b>No Search Results Found....</b></p>
+            <pre>Try another search</pre>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %} Scrapper {% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h3><center>Search For Flights</center></h3>
+        {{ wtf.quick_form(form) }}
+    </div>
+    {% endblock %}
+</body>
+</html>
