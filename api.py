@@ -9,8 +9,8 @@ from flask_wtf import Form
 from wtforms import StringField, SubmitField, DateField, SelectField, RadioField
 from wtforms.validators import DataRequired
 
-api = Flask(__name__)
-Bootstrap(api)
+app = Flask(__name__)
+Bootstrap(app)
 
 
 class SearchForm(Form):
@@ -24,7 +24,7 @@ class SearchForm(Form):
     submit = SubmitField("Search")
 
 
-@api.route('/', methods=["GET", "POST"])
+@app.route('/', methods=["GET", "POST"])
 def index():
     search_form = SearchForm(csrf_enabled=False)
     if search_form.validate_on_submit():
@@ -35,7 +35,7 @@ def index():
     return render_template('index.html', form=search_form)
 
 
-@api.route('/flights/source=<param1>dest=<param2>date=<param3>adult=<param4>child=<param5>type<check>?mode=s')
+@app.route('/flights/source=<param1>dest=<param2>date=<param3>adult=<param4>child=<param5>type<check>?mode=s')
 def results(param1, param2, param3, param4, param5, check):
     source = param1.upper()
     destination = param2.upper()
@@ -57,4 +57,4 @@ def results(param1, param2, param3, param4, param5, check):
 
 
 if __name__ == '__main__':
-    api.run(debug=False)
+    app.run(debug=False)
