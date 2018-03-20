@@ -1,5 +1,4 @@
-# Expedia0scraper
-[![N|Solid](https://www.sumologic.com/application/heroku/)](https://expedia0scraper.herokuapp.com/)
+# [Expedia0scraper](https://expedia0scraper.herokuapp.com/)
 ### Installation
 
 expedia0scraper requires [Python v2.7](https://python.org/) to run.
