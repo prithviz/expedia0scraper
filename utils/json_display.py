@@ -1,3 +1,7 @@
+import requests
+from lxml.html import fromstring
+
+
 def printer(a):
     for i in a:
         x = 0

@@ -1,3 +1,5 @@
+# coding=UTF-8
+
 __AUTHOR__ = "Tony"
 
 

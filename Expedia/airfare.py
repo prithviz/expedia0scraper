@@ -105,8 +105,8 @@ def scrape(source, destination, date, adults, children):
                         'airline': airline_name,
                         'plane': plane,
                         'plane_code': plane_code,
-                        'adultCount':adultCount,
-                        'childCount':childrenCount,
+                        'adultCount': adultCount,
+                        'childCount': childrenCount,
                         'timings': timings,
                     }
 
